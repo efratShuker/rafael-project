@@ -45,14 +45,14 @@ I try RandomForestClassifier:
 The confusion matrix:
 
 
-[ 0   0   0   0   0   2  3  311]]
+[[ 311  3   2   0   0   0   0   0]
  [  0   0   0   0   0   0   0   0]
  [  0   0   0   0   0   0   0   0]
  [  0   0   0   0   0   0   0   0]
  [  0   0   0   0   0   0   0   0]
  [  0   0   0   0   0   0   0   0]
  [  0   0   0   0   0   0   0   0]
-[ [  143  4  1 4   1   0   0 0]
+ [  0   0   0   1   4   1   4 143]]
 Average Error: 0.0700 degrees
 And accuracy: 0.968017
 Result is 96%
@@ -80,19 +80,22 @@ Else if energy of end second bigger than 162500 or distance between first second
 Else if energy of end second bigger than 106000 or distance between first second for last second of routes bigger than 7365 then type is 4.
 Else type is 1.
 I calculate confusion matrix:
-[ 0     0      0      334]]
- [ 0     3      128   128]
- [0    161   143   15  ]
- [[ 56  119  49      23]
-	 	And f1 score: 0.5858498705780846
+
+[[334   0      0     0]
+ [128   128    3     0]
+ [15    143   161    0]
+ [23    49    119   56]]
+
+And f1 score: 0.5858498705780846
 Result is 58.6% is not good
+
 *machine learning
 I try LogisticRegression
 The confusion matrix:
-[ 0     0      0      317]]
- [ 8     71    179  1     ]
- [48   274   25    1     ]
- [[ 202   19     15   0     ] 
+[[317  0     0    0]
+ [1  179    71    8]
+ [1   25   274   48]
+ [0   15    19  202]] 
 
 Average Error: 0.5483 degrees
 And accuracy: 0.8379310344827586
@@ -101,10 +104,10 @@ It is good but not excellent
 
 I try RandomForestClassifier
 The confusion matrix:
-[ 0     0      0      317]]
- [ 0     2      257  0     ]
- [16   329   3       0     ]
- [[ 204  29     3      0     ] 
+[[317   0    0    0]
+ [0   257    2    0]
+ [0     3   329  16]
+ [0     3    29  204]] 
 Average Error: 0.1448 degrees
 Accuracy: 0.9543103448275863
 Result is 95.4% it is very good
@@ -121,13 +124,13 @@ And result is 100%
 
 I try to change values of number of tree and depth of tree in RandomForestClassifier
 
-Accuracy of train set      	Accuracy of test set        	Depth of tree        	Number of trees
-1.0             	          0.95172	                      200                 	50
+Accuracy of train set      	Accuracy of test set          Depth of tree        	Number of trees
+1.0             	        0.95172	                      200                 	50
 1.0	                        0.95344	                      50                  	200
-1.0	                        0.95876	                      50	                  1000
+1.0	                        0.95876	                      50	                1000
 0.99655                   	0.93362	                      50                  	10
-0.99676                   	0.93362                     	100                 	10
-1.0	                        0.94913                     	100                 	100
+0.99676                   	0.93362                       100                 	10
+1.0	                        0.94913                       100                 	100
 
 You can see that 1000 tree and 50 depth is best: 95.87%
 I see that need number of tree bigger than depth of tree.
