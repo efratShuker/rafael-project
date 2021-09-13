@@ -126,6 +126,7 @@ The confusion matrix:
  [0   257    2    0]
  [0     3   329  16]
  [0     3    29  204]] 
+ 
 Average Error: 0.1448 degrees
 Accuracy: 0.9543103448275863
 Result is 95.4% it is very good
